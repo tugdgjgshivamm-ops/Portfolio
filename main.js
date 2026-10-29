@@ -127,22 +127,6 @@ gsap.utils.toArray('.premium-card').forEach(card => {
     });
 });
 
-// Skills staggered fade-in within groups
-gsap.utils.toArray('.skill-group').forEach(group => {
-    const cards = group.querySelectorAll('.skill-card');
-    gsap.from(cards, {
-        scrollTrigger: {
-            trigger: group,
-            start: "top 85%",
-        },
-        y: 20,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.05,
-        ease: "back.out(1.5)"
-    });
-});
-
 // Contact Section split slide
 gsap.from(".contact-info", {
     scrollTrigger: { trigger: ".contact-wrapper", start: "top 80%" },
